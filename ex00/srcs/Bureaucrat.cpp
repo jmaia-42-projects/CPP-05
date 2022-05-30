@@ -6,7 +6,7 @@
 /*   By: jmaia <jmaia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 13:02:05 by jmaia             #+#    #+#             */
-/*   Updated: 2022/05/30 13:26:45 by jmaia            ###   ########.fr       */
+/*   Updated: 2022/05/30 13:40:50 by jmaia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ Bureaucrat::Bureaucrat(std::string name, unsigned int grade):	name(name)
 	this->grade = grade;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &obj)
+Bureaucrat::Bureaucrat(Bureaucrat const &vogon)
 {
-	*this = obj;
+	*this = vogon;
 }
 
 Bureaucrat::~Bureaucrat(void) { }
 
-Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &obj)
+Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &vogon)
 {
-	this->grade = obj.grade;
+	this->grade = vogon.grade;
 	return (*this);
 }
 
@@ -43,7 +43,7 @@ unsigned int	Bureaucrat::getGrade(void) const
 	return (this->grade);
 }
 
-void	Bureaucrat::throwExceptionIfGradeInvalid(unsigned int grade)
+void	Bureaucrat:hthrowExceptionIfGradeInvalid(unsigned int grade)
 {
 	if (grade < 1)
 		throw (Bureaucrat::GradeTooHighException(grade));
@@ -65,9 +65,9 @@ void	Bureaucrat::decrementGrade(unsigned int amount)
 	this->grade += amount;
 }
 
-std::ostream	&operator<<(std::ostream &os, Bureaucrat const &obj)
+std::ostream	&operator<<(std::ostream &os, Bureaucrat const &vogon)
 {
-	return (os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".");
+	return (os << vogon.getName() << ", bureaucrat grade " << vogon.getGrade() << ".");
 }
 
 Bureaucrat::GradeTooHighException::GradeTooHighException(unsigned int grade)

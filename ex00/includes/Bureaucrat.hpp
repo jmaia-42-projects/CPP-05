@@ -6,7 +6,7 @@
 /*   By: jmaia <jmaia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 12:28:13 by jmaia             #+#    #+#             */
-/*   Updated: 2022/05/30 13:15:45 by jmaia            ###   ########.fr       */
+/*   Updated: 2022/05/30 13:41:04 by jmaia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ class	Bureaucrat
 		void	throwExceptionIfGradeInvalid(unsigned int grade);
 	public:
 		Bureaucrat(std::string name, unsigned int grade);
-		Bureaucrat(Bureaucrat const &obj);
+		Bureaucrat(Bureaucrat const &vogon);
 		~Bureaucrat(void);
 
-		Bureaucrat	&operator=(Bureaucrat const &obj);
+		Bureaucrat	&operator=(Bureaucrat const &vogon);
 
 		std::string		getName(void) const;
 		unsigned int	getGrade(void) const;
@@ -58,6 +58,6 @@ class	Bureaucrat
 		};
 };
 
-std::ostream	&operator<<(std::ostream &os, Bureaucrat const &obj);
+std::ostream	&operator<<(std::ostream &os, Bureaucrat const &vogon);
 
 #endif
