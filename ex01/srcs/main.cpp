@@ -6,7 +6,7 @@
 /*   By: jmaia <jmaia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 12:51:16 by jmaia             #+#    #+#             */
-/*   Updated: 2022/05/30 17:09:49 by jmaia            ###   ########.fr       */
+/*   Updated: 2022/05/31 11:33:10 by jmaia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,8 @@ int	main(void)
 		Bureaucrat	bob("bob", 3);
 		Bureaucrat	carol("carol", 4);
 
-		carol.signForm(formA); // This should throw an exception
+		carol.signForm(formA); // This should print an error
 		bob.signForm(formA);
-		alice.signForm(formA); // This should throw an exception
+		alice.signForm(formA); // This should print an error
 	}
 }
