@@ -6,12 +6,13 @@
 /*   By: jmaia <jmaia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 12:51:16 by jmaia             #+#    #+#             */
-/*   Updated: 2022/05/31 16:11:38 by jmaia            ###   ########.fr       */
+/*   Updated: 2022/05/31 16:16:32 by jmaia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
+#include <cstdlib>
 #include <iostream>
 
 #include "ShrubberyCreationForm.hpp"
@@ -110,6 +111,7 @@ int	main(void)
 	/* *** EX02 *** */
 
 	{
+		srand(time(NULL));
 		ShrubberyCreationForm	shrubberyForm("tests/test1");
 		ShrubberyCreationForm	shrubberyForm3("tests/inacessible_subfolder/file");
 		ShrubberyCreationForm	shrubberyForm4("tests/folder_with_no_write_perm/file");
@@ -151,5 +153,7 @@ int	main(void)
 		largeCanExec.executeForm(presidentialForm);
 		limitCanExec.executeForm(presidentialForm);
 		cannotExec.executeForm(presidentialForm); // This should print an error
+
+		megaVogon.executeForm(robotomyForm);
 	}
 }
