@@ -6,7 +6,7 @@
 /*   By: jmaia <jmaia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 13:02:05 by jmaia             #+#    #+#             */
-/*   Updated: 2022/05/30 13:40:50 by jmaia            ###   ########.fr       */
+/*   Updated: 2022/06/24 12:46:22 by jmaia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ unsigned int	Bureaucrat::getGrade(void) const
 	return (this->grade);
 }
 
-void	Bureaucrat:hthrowExceptionIfGradeInvalid(unsigned int grade)
+void	Bureaucrat::throwExceptionIfGradeInvalid(unsigned int grade)
 {
 	if (grade < 1)
 		throw (Bureaucrat::GradeTooHighException(grade));
